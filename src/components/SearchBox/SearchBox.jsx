@@ -1,15 +1,27 @@
-import { useId } from "react";
-import css from "./SearchBox.module.css";
+import { useDispatch } from 'react-redux';
+import css from './SearchBox.module.css'
+import { changeFilter } from '../../redux/filtersSlice';
+import { useId } from 'react';
 
-const SearchBox = ({ value, onChange}) => {
+const SearchBox = () => {
+  const dispatch = useDispatch();
   const uniqInputId = useId();
 
+  const handleChange = (e) => {
+    dispatch(changeFilter(e.target.value))
+  }
+
+
+
   return (
-      <div className={css.formEl}>
-        <label htmlFor={uniqInputId}> Find contacts by name</label>
-        <br />
-        <input id={uniqInputId} value={value} type='text' onChange={(e)=>onChange(e.target.value)} />
-      </div>
+    <div className={css.formEl}>
+      <label htmlFor={uniqInputId}>Find contacts by name</label>
+      <input
+        type="text"
+        id={uniqInputId}
+        onChange={handleChange}
+      />
+    </div>
   );
 };
 

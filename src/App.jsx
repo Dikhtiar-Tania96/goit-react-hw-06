@@ -10,22 +10,10 @@ function App () {
       <ContactForm/>
       <SearchBox/>
       <ContactList/>
-
     </div>
   )
 }
 
 export default App
 
-// function App() {
-//   return (
-//     <PersistGate loading={null} persistor={persistor}>
-//         <div className="App">
-//           <h1>Contact Book</h1>
-//           <ContactForm />
-//           <SearchBox />
-//           <ContactList />
-//         </div>
-//       </PersistGate>
-//   )
-// }
+
