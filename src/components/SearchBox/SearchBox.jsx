@@ -15,7 +15,7 @@ const SearchBox = () => {
 
   return (
     <div className={css.formEl}>
-      <label htmlFor={uniqInputId}>Find contacts by name</label>
+      <label htmlFor={uniqInputId}>Find contacts by name : </label>
       <input
         type="text"
         id={uniqInputId}
