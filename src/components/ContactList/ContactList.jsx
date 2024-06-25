@@ -16,7 +16,7 @@ const filterContacts = contacts.filter(contact => contact.name.toLowerCase().inc
       {filterContacts.map(contact => (
         <Contact key={contact.id} contact={contact}/>
       ))}
-    </ul>
+    </ul>.filter.
   );
 }
 
